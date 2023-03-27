@@ -1,25 +1,3 @@
-require('dotenv').config({
-  path: `.env`,
-})
-
-let repository = process.env.GATSBY_PRISMIC_REPOSITORY_NAME_DEV
-let api_token = process.env.GATSBY_PRISMIC_CUSTOM_TYPES_API_TOKEN_DEV
-
-if (process.env.DEV) {
-    repository = process.env.GATSBY_PRISMIC_REPOSITORY_NAME_DEV
-    api_token = process.env.GATSBY_PRISMIC_CUSTOM_TYPES_API_TOKEN_DEV
-}
-
-if (process.env.UAT) {
-  repository = process.env.GATSBY_PRISMIC_REPOSITORY_NAME_UAT
-  api_token = process.env.GATSBY_PRISMIC_CUSTOM_TYPES_API_TOKEN_UAT
-}
-
-if (process.env.PROD) {
-  repository = process.env.GATSBY_PRISMIC_REPOSITORY_NAME_PROD
-  api_token = process.env.GATSBY_PRISMIC_CUSTOM_TYPES_API_TOKEN_PROD
-}
-
 module.exports = {
   siteMetadata: {
     title: `SkyPoint`,
@@ -40,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-source-prismic`,
       options: {
-        repositoryName: repository,
-        customTypesApiToken: api_token,
+        repositoryName: "skypoint-dev",
+        customTypesApiToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibWFjaGluZTJtYWNoaW5lIiwiZGJpZCI6InNreXBvaW50LWRldi1mZjg2YTNlYy1mY2YwLTQwZDAtYjA5YS1iZWRkZmJkMjEzMzRfNCIsImRhdGUiOjE2NjY2NjIzMzMsImRvbWFpbiI6InNreXBvaW50LWRldiIsImlhdCI6MTY2NjY2MjMzM30.8W_eNfiwSnrh0fDKpvVI0C7qsnDaMFa8O0xYmQuA-IQ",
         linkResolver: require('./src/linkResolver').linkResolver,
       },
     },
