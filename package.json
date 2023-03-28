@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Rez",
   "dependencies": {
+    "@gatsby-cloud-pkg/gatsby-plugin-preview": "^1.0.19",
     "@hookform/resolvers": "^2.9.10",
     "@imgix/gatsby": "^2.0.5",
     "@prismicio/react": "^2.5.0",
