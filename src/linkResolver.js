@@ -6,5 +6,7 @@ exports.linkResolver = doc => {
     case "Subpage": {
       return `/${doc.uid}`
     }
+    default :
+      return "/"
   }
 }
