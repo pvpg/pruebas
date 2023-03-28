@@ -26,7 +26,6 @@
     "gatsby-source-prismic": "^5.2.10",
     "gatsby-transformer-sharp": "^4.19.0",
     "gbimage-bridge": "^0.2.2",
-    "http-cache-semantics": "^4.1.1",
     "is-odd": "^3.0.1",
     "npm": "^8.19.2",
     "parse-url": "^8.1.0",
