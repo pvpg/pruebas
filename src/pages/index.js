@@ -289,6 +289,7 @@ const IndexPage = props => {
 export const Head = (props) => (
   <>
     <title>{props.data.prismicHomepage.data.tab_title +` | SkyPoint`}</title>
+    <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=skypoint-dev"></script>
     <noscript><iframe title="frame" src="//www.googletagmanager.com/ns.html?id=GTM-WCSFZ5" height="0" width="0" style={{display:'none'}}></iframe></noscript>
     <script>{`
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
