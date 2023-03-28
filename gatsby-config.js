@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-source-prismic`,
       options: {
-        repositoryName: "skypoint-dev",
-        customTypesApiToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibWFjaGluZTJtYWNoaW5lIiwiZGJpZCI6InNreXBvaW50LWRldi1mZjg2YTNlYy1mY2YwLTQwZDAtYjA5YS1iZWRkZmJkMjEzMzRfNCIsImRhdGUiOjE2NjY2NjIzMzMsImRvbWFpbiI6InNreXBvaW50LWRldiIsImlhdCI6MTY2NjY2MjMzM30.8W_eNfiwSnrh0fDKpvVI0C7qsnDaMFa8O0xYmQuA-IQ",
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+        customTypesApiToken: process.env.PRISMIC_ACCESS_TOKEN,
         linkResolver: require('./src/linkResolver').linkResolver,
       },
     },
@@ -53,5 +53,13 @@ module.exports = {
         icon: 'src/images/icon-512x512.png',
       },
     },
+    {
+      resolve: 'gatsby-plugin-prismic-previews',
+      options: {
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        linkResolver: require('./src/linkResolver').linkResolver,
+      },
+    }
   ]
 }
