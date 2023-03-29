@@ -42,6 +42,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
