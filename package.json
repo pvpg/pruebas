@@ -9,7 +9,7 @@
     "@hookform/resolvers": "^2.9.10",
     "@imgix/gatsby": "^2.1.2",
     "@prismicio/react": "^2.5.0",
-    "gatsby": "^5.7.0",
+    "gatsby": "^5.8.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-gatsby-cloud": "^4.25.0",
     "gatsby-plugin-google-analytics": "^5.7.0",

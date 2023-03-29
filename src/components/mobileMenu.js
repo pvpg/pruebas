@@ -19,7 +19,7 @@ const MobileMenuList = ({ menu }) => {
       {menu.subMenu && isActive && (
         <ul >
           {menu.subMenu.map((sm, i) => (
-            <li key={i}>
+            <li key={'submenu-'+i}>
               {menu.link[i] &&
                 <AnchorLink
                   to={menu.link[i]}

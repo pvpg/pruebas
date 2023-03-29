@@ -131,12 +131,12 @@ const Header = () => {
           <>
             <nav className={scroll ? "stickyMobileMenu" : "mobileMenu"}>
               <ul>
-                <li key="logoKey">
+                <li key="logoKeyMobile">
                   <a href="/">
                     <div className="mobileLogo"></div>
                   </a>
                 </li>
-                <li key="menu">
+                <li key="menuMobile">
                   <div
                     role="button"
                     tabIndex={0}
@@ -151,8 +151,8 @@ const Header = () => {
             {isMenuOpen && (
               <div className="mobileSubMenu">
                 <ul>
-                  {MenuList().map((m, i) => (
-                    <MobileMenuList key={i} menu={m} index={i} />
+                  {MenuList().map((m, i) => ( 
+                   <MobileMenuList key={'menulist-'+i} menu={m} index={i} />
                   ))}
                 </ul>
               </div>
@@ -172,20 +172,20 @@ const Header = () => {
         {size.width >= 900 && (
           <nav className={scroll ? "stickyMenu" : "menu"}>
             <ul>
-              <li key="logoKey">
+              <li key="logoKeyDesktop">
                 <a href="/">
                   <div className="logo"></div>
                 </a>
               </li>
               {MenuList().map((m, i) => (
-                <>
+                <span key={i}>
                   {(m.menu !== "More") && (
-                    <li key={i}>
+                    <li key={"Menu-"+i}>
                       <a href={"/" + headerLink(m.menu)}>{m.menu}</a>
                       {m.subMenu && (
                         <ul>
-                          {m.subMenu.map((sm, i) => (
-                            <li key={i}>
+                          {m.subMenu.map((sm, j) => (
+                            <li key={'Submenu-'+j}>
                               {m.link[i] && <a href={m.link[i]}>{sm}</a>}
                               {!m.link[i] && <a href="/">{sm}</a>}
                             </li>
@@ -193,8 +193,8 @@ const Header = () => {
                         </ul>
                       )}
                     </li>
-                  )}
-                </>
+                  )} 
+                </span>
               ))}
               <li key="buttonKey">
                 <a 

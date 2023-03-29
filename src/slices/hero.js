@@ -38,7 +38,7 @@ export const Hero = props => {
       )}
       {(props.slice.primary.background_type && size.width > 900) && (
         <section className={cls}>
-          <video playsinline autoPlay muted loop className="videoBackground">
+          <video playsInline autoPlay muted loop className="videoBackground">
             <source src={props.slice.primary.video.url} type="video/mp4" />
           </video>
           <div className="container">
