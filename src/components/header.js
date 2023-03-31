@@ -5,6 +5,7 @@ import { PrismicRichText } from "@prismicio/react"
 import { useStaticQuery, graphql } from "gatsby"
 import useWindowSize from "./useWindowSize"
 import MobileMenuList from "./mobileMenu"
+import { Link } from "gatsby"
 
 const Header = () => {
   const size = useWindowSize()
@@ -121,6 +122,22 @@ const Header = () => {
             <PrismicRichText
               className={`txt-${headerElement.prismicNavigation.data.text_colour}`}
               field={headerElement.prismicNavigation.data.top_message.richText}
+              components={{
+                hyperlink: ({ node, children, key }) => (
+                  <>
+                    {node.data.uid &&(
+                      <Link to={`/${node.data.uid}`} key={key}>
+                        {children}
+                      </Link>
+                    )}
+                    {!node.data.uid &&(
+                      <Link to={node.data.url} key={key}>
+                        {children}
+                      </Link>
+                    )}
+                  </>
+                )
+              }}
             />
           )}
         </section>
