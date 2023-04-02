@@ -28,7 +28,7 @@ module.exports = {
       options: {
         repositoryName: "skypoint-dev",
         accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibWFjaGluZTJtYWNoaW5lIiwiZGJpZCI6InNreXBvaW50LWRldi1mZjg2YTNlYy1mY2YwLTQwZDAtYjA5YS1iZWRkZmJkMjEzMzRfNCIsImRhdGUiOjE2NjY2NjIzMzMsImRvbWFpbiI6InNreXBvaW50LWRldiIsImlhdCI6MTY2NjY2MjMzM30.8W_eNfiwSnrh0fDKpvVI0C7qsnDaMFa8O0xYmQuA-IQ",
-        linkResolver: require('./src/linkResolver').linkResolver,
+        linkResolver: require('./src/linkResolver'),
       },
     },
     {
