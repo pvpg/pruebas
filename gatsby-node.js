@@ -13,8 +13,10 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  console.log("QR",queryResult)
+
   const productTemplate = path.resolve(`src/templates/using-dsg.js`)
-  queryResult.data.allPrismicPage.nodes.forEach(node => {
+  queryResult.data.allPrismicSubpage.nodes.forEach(node => {
     createPage({
       path:  "/"+page.uid,
       component: productTemplate,
