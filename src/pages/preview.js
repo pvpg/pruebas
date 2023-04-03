@@ -1,4 +1,4 @@
-import * as React from 'react'
+// import * as React from 'react'
 import { withPrismicPreviewResolver } from 'gatsby-plugin-prismic-previews'
 
 // Update the path to your Link Resolver

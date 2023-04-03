@@ -4,19 +4,19 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const queryResult = await graphql(`
     query {
-      allPrismicPage {
+      allPrismicSubpage {
         nodes {
-          id
+          uid
           url
         }
       }
     }
   `)
 
-  const productTemplate = path.resolve(`src/templates/product.js`)
+  const productTemplate = path.resolve(`src/templates/using-dsg.js`)
   queryResult.data.allPrismicPage.nodes.forEach(node => {
     createPage({
-      path:  page.url,
+      path:  "/"+page.uid,
       component: productTemplate,
       context: {
         // This time the entire product is passed down as context
