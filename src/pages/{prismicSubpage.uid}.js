@@ -309,7 +309,7 @@ export const Head = (props) => (
 
 export default withPrismicPreview(IndexPage, [
   {
-    repositoryName: 'your-repository-name',
+    repositoryName: 'skypoint-dev',
     linkResolver,
   },
 ])
