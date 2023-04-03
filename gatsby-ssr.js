@@ -1,12 +1,9 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+import * as React from 'react'
+import { PrismicPreviewProvider } from 'gatsby-plugin-prismic-previews'
 
-// exports.onRenderBody = ({ setHtmlAttributes }) => {
-//   setHtmlAttributes({ lang: `en` })
-// }
+export const wrapRootElement = ({ element }) => (
+  <PrismicPreviewProvider>{element}</PrismicPreviewProvider>
+)
 
 
 // import * as React from 'react'

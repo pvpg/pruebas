@@ -1,6 +1,7 @@
 import  React, {useEffect} from "react"
 import { graphql } from "gatsby"
 import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
+import { linkResolver } from "../linkResolver"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { SliceZone } from "@prismicio/react"
@@ -306,4 +307,9 @@ export const Head = (props) => (
   </>
 )
 
-export default withPrismicPreview(IndexPage)
+export default withPrismicPreview(IndexPage, [
+  {
+    repositoryName: 'your-repository-name',
+    linkResolver,
+  },
+])
