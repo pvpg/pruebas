@@ -1,6 +1,7 @@
 import  React, {useEffect} from "react"
 import { setGlobalState } from "../components/store"
 import { graphql } from "gatsby"
+import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { SliceZone } from "@prismicio/react"
@@ -330,4 +331,4 @@ export const Head = (props) => (
   </>
 )
 
-export default IndexPage
+export default  withPrismicPreview(IndexPage)
