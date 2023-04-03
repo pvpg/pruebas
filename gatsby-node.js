@@ -1,39 +1,56 @@
+const path = require("path")
 
-const path = require("path");
-
-exports.createPages = async (gatsbyContext) => {
-  const { actions, graphql } = gatsbyContext;
-  const { createPage } = actions;
-
-  {
-    const queryResult = await graphql(`
-      query {
-        allPrismicPage {
-          nodes {
-            id
-            url
-          }
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const queryResult = await graphql(`
+    query {
+      allPrismicPage {
+        nodes {
+          id
+          url
         }
       }
-    `);
-
-    for (const page of queryResult.data.allPrismicPage.nodes ?? []) {
-      createPage({
-        path: page.url,
-        component: path.resolve(__dirname, "./src/templates/using-dsg.js"),
-        context: { id: page.id },
-      });
     }
-  }
-};
+  `)
+
+  const productTemplate = path.resolve(`src/templates/product.js`)
+  queryResults.data.allProducts.nodes.forEach(node => {
+    createPage({
+      path:  page.url,
+      component: productTemplate,
+      context: {
+        // This time the entire product is passed down as context
+        product: node,
+      },
+    })
+  })
+}
 
 
-// exports.createPages = async ({ actions }) => {
-//   const { createPage } = actions
-//   createPage({
-//     path: "/using-dsg",
-//     component: require.resolve("./src/templates/using-dsg.js"),
-//     context: {},
-//     defer: true,
-//   })
+// const path = require("path");
+
+// exports.createPages = async (gatsbyContext) => {
+//   const { actions, graphql } = gatsbyContext;
+//   const { createPage } = actions;
+
+//   {
+//     const queryResult = await graphql(`
+//       query {
+//         allPrismicPage {
+//           nodes {
+//             id
+//             url
+//           }
+//         }
+//       }
+//     `);
+
+//     for (const page of queryResult.data.allPrismicPage.nodes ?? []) {
+//       createPage({
+//         path: page.url,
+//         component: path.resolve(__dirname, "./src/templates/using-dsg.js"),
+//         context: { id: page.id },
+//       });
+//     }
+//   }
 // }
