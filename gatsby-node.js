@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   const productTemplate = path.resolve(`src/templates/product.js`)
-  queryResults.data.allProducts.nodes.forEach(node => {
+  queryResult.data.allPrismicPage.nodes.forEach(node => {
     createPage({
       path:  page.url,
       component: productTemplate,
