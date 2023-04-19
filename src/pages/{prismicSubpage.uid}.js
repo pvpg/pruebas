@@ -11,6 +11,7 @@ import "./skypoints.scss"
 export const query = graphql`
   query pageQuery($id: String) {
     prismicSubpage(id: { eq: $id }) {
+      _previewable
       data {
         body {
           ... on PrismicSubpageDataBodyHero {
