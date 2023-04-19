@@ -25,6 +25,7 @@ module.exports = {
         repositoryName: "skypoint-devp",
         customTypesApiToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibWFjaGluZTJtYWNoaW5lIiwiZGJpZCI6InNreXBvaW50LWRldnAtMzBiYTJmNjktZTA4Yi00MWJjLWEzNGMtNmM2MzU0ZDVhMzk5XzUiLCJkYXRlIjoxNjgxOTMzNjY5LCJkb21haW4iOiJza3lwb2ludC1kZXZwIiwiaWF0IjoxNjgxOTMzNjY5fQ.9Ji-vkTnVxU2E5g7PCeMXS1xX0feMA_MGkUguIIKk1w",
         linkResolver: require('./src/linkResolver').linkResolver,
+        // releaseID: "ZCJ4yxAAAB8AvpFY"
       },
     },
     {
@@ -32,7 +33,7 @@ module.exports = {
       options: {
         repositoryName: "skypoint-devp",
         accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibWFjaGluZTJtYWNoaW5lIiwiZGJpZCI6InNreXBvaW50LWRldnAtMzBiYTJmNjktZTA4Yi00MWJjLWEzNGMtNmM2MzU0ZDVhMzk5XzUiLCJkYXRlIjoxNjgxOTMzNjY5LCJkb21haW4iOiJza3lwb2ludC1kZXZwIiwiaWF0IjoxNjgxOTMzNjY5fQ.9Ji-vkTnVxU2E5g7PCeMXS1xX0feMA_MGkUguIIKk1w",
-        linkResolver: require('./src/linkResolver'),
+        linkResolver: require('./src/linkResolver').linkResolver,
       },
     },
     {
