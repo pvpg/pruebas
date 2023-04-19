@@ -11,7 +11,7 @@ export const wrapRootElement = ({ element }) => (
   <PrismicPreviewProvider
     repositoryConfigs={[
       {
-        repositoryName: "skypoint-dev",
+        repositoryName: "skypoint-devp",
         linkResolver,
         componentResolver: componentResolverFromMap({
           subpage: PageTemplate,
