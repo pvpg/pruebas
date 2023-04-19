@@ -268,7 +268,7 @@ export const Head = (props) => (
   <>
     <title>{props.data.prismicSubpage.data.tab_title +` | SkyPoint`}</title>
     <noscript><iframe title="frame" src="//www.googletagmanager.com/ns.html?id=GTM-WCSFZ5" height="0" width="0" style={{display:'none'}}></iframe></noscript>
-    <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=skypoint-dev"></script>
+    <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=p"></script>
     <script>{`
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
