@@ -14,7 +14,7 @@ export const wrapRootElement = ({ element }) => (
         repositoryName: "skypoint-dev",
         linkResolver,
         componentResolver: componentResolverFromMap({
-          page: PageTemplate,
+          subpage: PageTemplate,
         }),
       },
     ]}
